@@ -8,7 +8,7 @@
 </head>
 <body>
     <!------------------------------------------------------------ header section ------------------------------------------------------>
-    <div class="header">
+    <div id="header">
         <div class="container">
             <!-- navbar -->
             <nav>
@@ -26,5 +26,67 @@
             </div>
         </div>
     </div>
+    <!------------------------------------------------------------ about section ------------------------------------------------------>
+    <div id="about">
+        <div class="container">
+            <!-- column 1 -->
+            <div class="row">
+                <div class="general-intro">
+                    <h1 class="subtitle">About Me</h1><br>
+                    <p>Hi, I am Keerthy. I started to code from my High-School and was always fascinated from it. After studying Electrical engineering
+                    and information technology i knew coding was the thing i really loved. I then involved myself in various own projects out of curiosity
+                    and gained additional practical knowledge as well. Now I am looking to enter the job market and prove as well of evolve my skills as well
+                    as gain valuable experience.</p>
+                </div>
+                <!-- column 2 -->
+                <div class="q-column">
+                    <div class="qualification-links">
+                        <h2 class="q-links active-link" onclick="opentab('skills')">Skills</h2>
+                        <h2 class="q-links" onclick="opentab('ownproject')">Own Projects</h2>
+                        <h2 class="q-links" onclick="opentab('experience')">Experience</h2>
+                    </div>
+                    <div class="q-contents">
+                        <div class="q-content active-content" id="skills">
+                            <ul>
+                                <li>Html</li>
+                                <li>CSS</li>
+                                <li>Javascript</li>
+                            </ul>
+                        </div>
+                        <div class="q-content" id="ownproject">
+                            <ul>
+                                <li>Portfolio</li>
+                                <li>Simple Movie Clone</li>
+                                <li>Responsive E-Commerce Site</li>
+                                <li>Instagram Clone</li>
+                            </ul>
+                        </div>
+                        <div class="q-content" id="experience">
+                            <ul>
+                                <li>Maintaining Wordpress Site of an Student Organization</li>
+                                <li>Responsive Web Site Creation for Friends</li>
+                                <li>Projects in University using: Python, Java and C++</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    var qlinks=document.getElementsByClassName("q-links");
+    var qcontent=document.getElementsByClassName("q-content");
+    function opentab(qualification){
+        for(qlink of qlinks){
+            qlink.classList.remove("active-link");
+        }
+        for(qconten of qcontent){
+            qconten.classList.remove("active-content");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(qualification).classList.add("active-content");
+    }
+</script>
 </body>
 </html>

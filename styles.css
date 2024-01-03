@@ -67,3 +67,83 @@ nav ul li a:hover::after{
 .intro-text h1 span{
     color: #0000CD;
 }
+
+/* -------------------------------About section ---------------------------------------------------------*/
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.row{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.general-intro{
+    flex-basis: 45%
+}
+
+.subtitle{
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.q-column{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-basis: 50%;
+}
+
+.qualification-links{
+    flex-basis: 50%;
+    margin: 20px 0 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.q-links{
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    color:#fff;
+    position: relative
+}
+
+.q-links::after{
+    content:"";
+    width: 0;
+    height: 3px;
+    background: #0000CD;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.q-links.active-link::after{
+    width: 75%;
+}
+
+.q-content ul li{
+    list-style: none;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.q-content{
+    display: none;
+}
+
+.q-content.active-content{
+    display:block;
+}
+
